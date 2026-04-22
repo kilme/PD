@@ -1,0 +1,18 @@
+#N canvas 100 100 500 420 12;
+#X text 20 10 --- OSCILADOR BASICO ---;
+#X obj 20 40 loadbang;
+#X msg 20 70 \; pd dsp 1;
+#X text 200 70 <- DSP se activa solo al abrir;
+#X obj 30 130 hsl 200 20 100 2000 0 0 empty empty Frecuencia_Hz 0 -9 0 10 -262144 -1 -1 4400 1;
+#X obj 30 170 osc~;
+#X obj 30 220 hsl 200 20 0 1 0 0 empty empty Volumen 0 -9 0 10 -262144 -1 -1 5000 1;
+#X obj 30 260 *~;
+#X obj 30 300 dac~;
+#X text 20 340 Mover slider Volumen para escuchar;
+#X text 20 360 Slider Frecuencia cambia el tono (100-2000 Hz);
+#X connect 1 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 8 0;
+#X connect 7 0 8 1;
